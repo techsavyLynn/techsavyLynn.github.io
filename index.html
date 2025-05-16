@@ -1,124 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+ <head>
   <meta charset="UTF-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lino John</title>
+  <title>Lino John • Data Enthusiast •</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-     {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #1a1a1a;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-    header {
-      text-align: center;
-      padding: 100px 20px 40px;
-      background-color: #fff;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-    header p {
-      font-size: 1.25rem;
-      margin-top: 10px;
-      color: #666;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 0.875rem;
-      background-color: #eee;
-      color: #444;
-    }
-  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+  document.documentElement.classList.add('js-loaded');
+</script>
+
+
 </head>
+
 <body>
-  <header>
-    <img src="images/profile.jpg" alt="Profile" class="profile-pic" />
-    <h1>👋 Hey there, I’m Lino John</h1>
-    <p>Data Enthusiast • United Kingdom • Storyteller • Technologist</p>
-  </header>
 
-  <section id="about">
-    <h2>🧠 About Me</h2>
-    <p>🚀 Data whisperer by day, insight ninja by night.  
-	<br>
-	
-📊 Turning chaos into clarity, one dataset at a time.
-<br>
-<br>
+<canvas id="galaxy-bg-back"></canvas>
+<canvas id="galaxy-bg-mid"></canvas>
+<canvas id="galaxy-bg-front"></canvas>
+  <!-- Navbar -->
+<nav class="navbar">
+<a href="#home">
+  <img src="images/logo.png" alt="Lino John Logo" class="navbar-logo" />
+</a>
 
-I'm a Data & Insights Manager with a curious mind and an allergic reaction to boring dashboards. I live at the intersection of analytics, storytelling, and strategy, where charts make sense and spreadsheets cry tears of joy.
-<br>
-I believe that data is like a teenager – messy, misunderstood, and full of potential. My job? Translate that mess into meaningful action.
-<br>
-<br>
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="#home" data-target="home">About</a></li>
+      <li><a href="#skills" data-target="skills">Skills</a></li>
+      <li><a href="#blogs" data-target="blogs">Blog</a></li>
+      <li><a href="#gallery" data-target="gallery">Gallery</a></li>
+      <li><a href="#contact" data-target="contact">Contact</a></li>
+    </ul>
+    <div class="nav-underline"></div>
+  </div>
+</nav>
 
- 📌 Currently Working On
-- 🚧 Making sense of 500 Excel sheets someone named “Final_v3_NEW_USE_THIS_ONE.xlsx”
-- 📈 Building dashboards people actually want to use
-- 🤖 Automating the things that make teams say “Wait, you can do that?”
-<br>
-<br>
+<header class="page-header" id="home">
+  <div class="intro-two-column">
+    <!-- Left Column: 30% -->
+    <div class="left-column">
+      <!-- Profile Picture First -->
+      <div class="profile-wrapper">
+        <div class="polygon-bg">
+          <img src="images/profile_Pic.jpg" alt="Profile" class="profile-pic grayscale" />
+        </div>
+      </div>
+      <!-- Achievements Next -->
+      <div class="achievements-box">
+        <h3>🏆 Achievements</h3>
+        <ul>
+          <li>🥇 Best Data Visualisation Award — 2023</li>
+          <li>📢 Speaker at DataCon UK — 2022</li>
+          <li>📚 Conducted 10+ Data Workshops</li>
+        </ul>
+      </div>
 
-🔧 Skills & Tools
-- Data Stuff: SQL, Power BI, Tableau, Python (Pandas, NumPy)
-- Business Insight: Forecasting,Healthcare Analytics,Merchandising Strategy and Insights, Market Analysis, Category Management 
-- Sleight of Hand: VBA sorcery, Excel dark magic, presentation storytelling
-- Soft Skills: Explaining stats without making people nap
-<br>
-<br>
+      <!-- Education Last -->
+      <div class="education-box">
+        <h3>🎓 Education</h3>
+        <ul>
+          <li><strong>MSc Data Science</strong><br>University of XYZ, UK — 2022</li>
+          <li><strong>BTech Information Technology</strong><br>ABC Institute, India — 2018</li>
+        </ul>
+      </div>
+    </div>
 
-🧩 Fun Facts
-- Dyslexic and proud – which means I literally see things differently.
-- Believes “Ctrl + Z” should exist in real life.
-- Can probably guess your favorite snack based on your spreadsheet formatting.
-<br>
-<br>
-🧘 Quote I Live By:
- "Without data, you're just another person with an opinion."  
-> — W. Edwards Deming
-<br>
-<br>
- 📫 Let’s Connect
-Got a dataset, a weird idea, or a philosophical musing about pie charts?  
-DMs open on <a href="https://www.linkedin.com/in/lino-john/" target="_blank">LinkedIn</a> or drop a line at 📧:  <a href="mailto:linoj118190@outlook.com">Send me an email</a>
-<br>
-<br>
+    <!-- Right Column: 70% -->
+    <div class="right-column intro-text animate-slideInRight observer-item">
+      <h2 class="typewriter" id="typewriter-text"></h2>
+      <p class="tagline">Data Enthusiast • United Kingdom • Storyteller • Technologist</p>
 
-Thanks for stopping by. May your code be clean and your insights actionable. 
-🧃 – Lino John
-</p>
+      <div class="about-content">
+        <h3>🧠 About Me</h3>
+        <div class="footer-fun-emoji"></div>
+
+        <p>
+          💡 Data whisperer by day, insight ninja by night.<br><br>
+          📊 Turning chaos into clarity, one dataset at a time.<br><br>
+          I’m a Data & Insights Manager... (rest of your bio here)<br><br>
+          🧘 <strong>Quote I Live By:</strong><br>
+          <em>"Without data, you're just another person with an opinion." — W. Edwards Deming</em><br><br>
+          📫 <strong>Let’s Connect:</strong><br>
+          <a href="https://www.linkedin.com/in/lino-john/" target="_blank">LinkedIn</a> • 
+          <a href="mailto:linoj118190@outlook.com">Email</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+  <!-- Skills Section -->
+
+<section class="skills-section" id="skills">
+
+<div class="section-title-with-icon">
+  <div class="icon pulse" data-feather="target"></div>
+  <h2>Areas of Expertise</h2>
+</div>
+
+</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+    <h3>• Data Analytics <BR>
+          • User Experience & Support <BR>  • Requirements Gathering  </h3>
+    </div>
+    <div class="skill-card">
+      <h3>• Project Management <br>• Database Performance <BR>• Cross-Functional Team Collaboration </h3>
+    </div>
+    <div class="skill-card">
+      <h3> • Process Optimisation <BR> • Data Security & Integrity <BR> • Agile Methodologies </h3>
+    </div>
+    <div class="skill-card">
+      <h3>• Data Visualisation<BR> • Customer Service & Satisfaction <BR>• Stakeholder Engagement</h3>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+<h2 class="section-title"><span class="emoji bounce">🚀</span> What’s in My Tech Toolbox?</h2>
+
+  <div class="skills-grid">
+  <div class="skill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg" alt="AWS" /> <p>AWS</p></div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftazure.svg" alt="Microsoft Azure" /><p>Azure</p></div> 
+    <div class="skill">  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/powerbi.svg" alt="Power BI" />  <p>Power BI</p></div>
+  <div class="skill"><div data-feather="bar-chart-2"></div><p>Tableau</p></div>
+<div class="skill"> <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/qlik.svg" alt="QlikSense" />  <p>QlikSense</p></div>
+<div class="skill"><div data-feather="code"></div><p>Python</p></div>
+   <div class="skill"><i class="fas fa-database"></i><p>DWH</p></div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/snowflake.svg" alt="Snowflake" /><p>Snowflake</p></div>
+<div class="skill"><div data-feather="codepen"></div><p>HTML</p></div>
+<div class="skill"><div data-feather="layout"></div><p>CSS</p></div>
+<div class="skill"><div data-feather="refresh-cw"></div><p>CI/CD</p></div>
+<div class="skill"><div data-feather="repeat"></div><p>ELT</p></div>
+<div class="skill"><div data-feather="shuffle"></div><p>ETL</p></div>
+<div class="skill"><div data-feather="layers"></div><p>Trello</p></div>
+<div class="skill"><div data-feather="book"></div><p>Jama</p></div>
+<div class="skill"><div data-feather="globe"></div><p>WordPress</p></div>
+<div class="skill"><div data-feather="database"></div><p>T-SQL</p></div>
+<div class="skill"><div data-feather="feather"></div><p>SQLite</p></div>
+<div class="skill"><div data-feather="git-branch"></div><p>Git</p></div>
+<div class="skill"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gitlab.svg" alt="GitLab" /><p>GitLab</p></div>
+  </div>
+</section>
+
+
+
+
+  <!-- Professional Summary Section -->
+<section class="experience-section" id="experience">
+  <h2 class="section-title"><span class="emoji pulse">💼</span> Professional Summary</h2>
+</section>
+<div class="experience-highlight">
+<div class="growing-circle">
+  <span id="experience-number">
+    <span class="years-count">0</span><span class="years-label">Yr</span>
+  </span>
+</div>
+
+  <span class="label"></span>
+</div>
+<div class="timeline-filters">
+  <button data-filter="all" class="active">All</button>
+  <button data-filter="varian">Varian</button>
+  <button data-filter="cognizant">Cognizant</button>
+  <button data-filter="smollan">Smollan</button>
+</div>
+
+<div class="timeline-vertical">
+  <div class="timeline-card observer-item" data-category="varian">
+  <div class="icon" data-feather="bar-chart-2"></div>
+
+    <h3>Data Visualisation Engineer</h3>
+    <p><strong>Varian Siemens Healthineers</strong><br>Jan 2023 – Present<br><small>2 yr 3 months</small></p>
+  </div>
+
+  <div class="timeline-card observer-item" data-category="cognizant">
+    <div class="icon"data-feather="briefcase"></div>
+    <h3>Associate – AIA-IMS-DI-Modern Data</h3>
+    <p><strong>Cognizant Technology</strong><br>Aug 2021 – Jan 2023<br><small>1 yr 6 months</small></p>
+  </div>
+
+  <div class="timeline-card observer-item" data-category="smollan">
+    <div class="icon"data-feather="cpu"></div>
+    <h3>IT Analyst</h3>
+    <p><strong>Smollan India Pvt. Ltd</strong><br>Dec 2017 – Aug 2021<br><small>3 yr 9 months</small></p>
+  </div>
+</div>
+
+</section>
+
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.observer-item').forEach(el => observer.observe(el));
+</script>
+
+
+  <!-- Blog Section -->
+  <section id="blogs">
+ <h2 class="section-title"><span class="emoji bounce">📝</span> Blogs</h2>
+    <div class="blog-list">
+      <div class="blog-post">
+        <h3><a href="https://medium.com/@linojohn8190/what-is-data-governance-lets-talk-about-tacos-first-175e0d77fe13" target="_blank" rel="noopener noreferrer">
+  What Is Data Governance? Let’s Talk About Tacos First
+</a>
+</h3>
+        <h3><a href="https://medium.com/@linojohn8190/why-data-visualization-is-the-icing-on-the-cake-aa1e18f9ec21" target="_blank" rel="noopener noreferrer">
+ Why Data Visualization Is the Icing on the Cake
+</a>
+    <h3><a href="https://medium.com/@linojohn8190/why-data-scientists-love-coffee-the-unspoken-driver-of-innovation-9048baf1ccfa" target="_blank" rel="noopener noreferrer">
+ Why Data Scientists Love Coffee: The Unspoken Driver of Innovation
+</a>
+</h3>
+
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 linojohn8190@gmail.com</p>
-	<p>🔗 <a href="https://github.com/techsavyLynn" target="_blank">GitHub</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/lino-john/" target="_blank">LinkedIn</a></p>
-  </section>
+  <!-- Gallery Section -->
 
-  <footer>
-    <p>© 2025 Lino John</p>
-  </footer>
+
+ 
+
+
+<section id="gallery">
+  <h2 class="section-title"><span class="emoji spin">📸</span> Photo Gallery</h2>
+
+
+  <div class="gallery-carousel-container">
+  <button class="nav-btn outside left" onclick="scrollCarousel(-1)">&#10094;</button>
+
+  <div class="gallery-carousel-wrapper" id="carousel-wrapper">
+    <div class="gallery-carousel">
+       <!-- Duplicate cards -->
+        <div class="gallery-card"><img src="images/Azure.png" alt="Azure Certificate"><div class="caption">Azure Certificate</div></div>
+        <div class="gallery-card"><img src="images/toysales.png" alt="Toy Sales Dashboard"><div class="caption">Toy Sales Dashboard</div></div>
+        <div class="gallery-card"><img src="images/Amazon.png" alt="Amazon Dashboard"><div class="caption">Amazon Dashboard</div></div>
+        <div class="gallery-card"><img src="images/Corporate_Spend.png" alt="Corporate Spend"><div class="caption">Corporate Spend Dashboard</div></div>
+        <!-- Duplicated set for loop effect -->
+        <div class="gallery-card"><img src="images/Azure.png" alt="Azure Certificate"><div class="caption">Azure Certificate</div></div>
+        <div class="gallery-card"><img src="images/toysales.png" alt="Toy Sales Dashboard"><div class="caption">Toy Sales Dashboard</div></div>
+        <div class="gallery-card"><img src="images/Amazon.png" alt="Amazon Dashboard"><div class="caption">Amazon Dashboard</div></div>
+        <div class="gallery-card"><img src="images/Corporate_Spend.png" alt="Corporate Spend"><div class="caption">Corporate Spend Dashboard</div></div>
+      
+    </div>
+  </div>
+
+  <button class="nav-btn outside right" onclick="scrollCarousel(1)">&#10095;</button>
+</div>
+</section>
+
+
+  
+<button id="theme-toggle" class="theme-toggle">🌓</button>
+<!-- Floating Action Button -->
+<div class="fab" onclick="scrollToContact()">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+</svg>
+</div> 
+
+<!-- Preloader -->
+<div id="preloader"><div class="loader-ring"></div></div>
+
+
+<!-- Scroll Progress Bar -->
+<div id="progress-bar"></div>
+
+
+<section id="contact">
+<div class="footer">
+    <div class="footer-heading">Find me on</div>
+  <a href="https://github.com/techsavyLynn" target="_blank" class="github">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub"> GitHub
+  </a>
+
+  <a href="https://www.linkedin.com/in/lino-john" target="_blank" class="linkedin">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn"> LinkedIn
+  </a>
+
+  <a href="https://buymeacoffee.com/techsavylynn" target="_blank" class="coffee">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/buymeacoffee.svg" alt="Buy Me a Coffee"> Buy Me a Coffee
+  </a>
+
+  <a class="email-button" href="mailto:linojohn118190@gmail.com">
+    ✉️ Write an Email
+  </a>
+
+  <div class="footer-text">
+    ✨ Made with ❤️ & caffeine by <strong>Lino John</strong> © 2025
+  </div>
+</div>
+
+
+
+
+<div class="footer-fun-emoji"></div>
+
+
+</section>
+
+<!-- Call-to-Action Banner -->
+<div class="cta-banner">📣 Let’s build something amazing together! Scroll down or hit 💬</div>
+<script src="script.js"></script>
+
+<script src="https://unpkg.com/feather-icons"></script>
+
 </body>
 </html>
